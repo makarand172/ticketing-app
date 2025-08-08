@@ -1,0 +1,9 @@
+.bug-fix {
+  display: flex;
+  padding: 10px 50px;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.bug-fix h3 {
+  color: red;
+}

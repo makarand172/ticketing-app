@@ -1,0 +1,102 @@
+/* Container for the table and cards */
+.ticket-list-view-container {
+  width: 100%;
+  margin: 0;
+}
+
+.ticket-list-view-table-wrapper {
+  overflow-x: auto;
+  display: block;
+}
+
+.ticket-list-view-table {
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #333;
+}
+.ticket-list-view-table th {
+  background-color: #f4f4f4;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.ticket-list-view-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.title-column,
+.description-column {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-column:hover,
+.description-column:hover {
+  white-space: normal;
+  word-wrap: break-word;
+  max-height: none;
+  background-color: #f9f9f9;
+}
+
+/* Card view for mobile */
+.card-view {
+  display: none;
+}
+
+.ticket-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.ticket-field {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.ticket-field strong {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+}
+
+.ticket-field span {
+  display: inline-block;
+  max-width: 60%;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 600px) {
+  .ticket-list-view-table-wrapper {
+    display: none;
+  }
+
+  .card-view {
+    display: block;
+  }
+
+  .ticket-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ticket-list-view-table th,
+  .ticket-list-view-table td,
+  .ticket-field {
+    font-size: 15px;
+  }
+}
